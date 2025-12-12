@@ -3,7 +3,7 @@ The NETOPIA Payment PHP library provides easy access to the NETOPIA Payments API
 applications written in the PHP language.
 
 ## Compatible
-PHP 5.7.x - 8.0.x
+PHP 7.4.0 - 8.1.x
 
 ## API Documention
 * https://netopia-system.stoplight.io/docs/payments-api/6530c434c2f93-netopia-payments-merchant-api
@@ -340,6 +340,9 @@ Use this endpoint to start a payment. Based on the response to this call the pro
 
 #### v1.0.5 - 2025-09-17
 * Change method of get token on IPN
+#### v1.0.6 - 2025-11-03
+* Upgrade JWT to ver ^6.0
+* Update IPN to be compatibil with JWT ver ^6.0
 
 ## License
 
