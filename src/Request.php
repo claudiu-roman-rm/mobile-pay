@@ -21,8 +21,9 @@ class Request extends Start
     public function setPayment(array $cardData, string|null $threeDSecusreData): array
     {
         if (!empty($threeDSecusreData)) {
-            $threeDSecusreData = json_decode($threeDSecusreData);
-            $threeDSecusreData->IP_ADDRESS = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : "127.0.0.1";
+            $decoded = json_decode($threeDSecusreData);
+            $decoded->IP_ADDRESS = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : "127.0.0.1";
+            $threeDSecusreData = json_encode($decoded);
         }
 
         return array(
